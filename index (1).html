@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usha Rajendiran — Senior Product Leader</title>
+<meta name="description" content="Senior Product Leader with 18 years in fintech and wealth management, building AI-powered products and agents.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0B1F3A;
+  --navy-mid: #152D4E;
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale: #F5EDD6;
+  --cream: #FAFAF7;
+  --white: #FFFFFF;
+  --text-primary: #0B1F3A;
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+  --border: #E2E8F0;
+  --max-w: 1100px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* ── Nav ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(250,250,247,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-weight: 500;
+  color: var(--navy); letter-spacing: 0.01em;
+}
+
+.nav-links {
+  display: flex; gap: 2rem; list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--navy); }
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 8rem 2rem 6rem;
+  max-width: var(--max-w); margin: 0 auto;
+}
+
+.hero-inner { max-width: 780px; }
+
+.hero-eyebrow {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+
+.hero-eyebrow::before {
+  content: ''; display: block;
+  width: 32px; height: 1px; background: var(--gold);
+}
+
+.hero-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400; line-height: 1.1;
+  color: var(--navy); margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-headline em {
+  font-style: italic; color: var(--gold);
+}
+
+.hero-sub {
+  font-size: 18px; font-weight: 300;
+  color: var(--text-secondary); line-height: 1.7;
+  max-width: 580px; margin-bottom: 3rem;
+}
+
+.hero-stats {
+  display: flex; gap: 3rem; flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.hero-stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 400; color: var(--navy);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 12px; color: var(--text-muted);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Section base ── */
+section {
+  padding: 7rem 2rem;
+  max-width: var(--max-w); margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+
+.section-eyebrow::before {
+  content: ''; display: block;
+  width: 24px; height: 1px; background: var(--gold);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400; color: var(--navy);
+  line-height: 1.15; margin-bottom: 1rem;
+}
+
+.section-divider {
+  border: none; border-top: 1px solid var(--border);
+  margin: 0 2rem;
+}
+
+/* ── Projects ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  margin-top: 4rem;
+}
+
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(11,31,58,0.08);
+  transform: translateY(-2px);
+}
+
+.project-tag {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-pale);
+  padding: 4px 10px; border-radius: 20px;
+  display: inline-block; margin-bottom: 1rem;
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 500;
+  color: var(--navy); line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.project-desc {
+  font-size: 15px; color: var(--text-secondary);
+  line-height: 1.7; margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.project-meta {
+  display: flex; flex-direction: column; gap: 1.25rem;
+  min-width: 240px;
+}
+
+.meta-block-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 0.5rem;
+}
+
+.meta-tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+
+.meta-tag {
+  font-size: 11px; font-weight: 500;
+  padding: 3px 10px; border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--navy); background: var(--cream);
+}
+
+.learning-list {
+  display: flex; flex-direction: column; gap: 6px;
+}
+
+.learning-item {
+  font-size: 13px; color: var(--text-secondary);
+  display: flex; gap: 8px; align-items: flex-start;
+  line-height: 1.5;
+}
+
+.learning-item::before {
+  content: '→'; color: var(--gold);
+  font-size: 12px; margin-top: 1px; flex-shrink: 0;
+}
+
+.project-links {
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.project-link {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--navy); text-decoration: none;
+  padding: 8px 16px; border-radius: 6px;
+  border: 1px solid var(--navy);
+  transition: all 0.2s;
+  display: flex; align-items: center; gap: 6px;
+}
+
+.project-link:hover {
+  background: var(--navy); color: var(--white);
+}
+
+.project-link.secondary {
+  border-color: var(--border); color: var(--text-secondary);
+}
+
+.project-link.secondary:hover {
+  border-color: var(--navy); color: var(--navy);
+  background: transparent;
+}
+
+.status-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--success, #276749);
+  background: #F0FDF4;
+  padding: 4px 10px; border-radius: 20px;
+  border: 1px solid #BBF7D0;
+  margin-bottom: 1rem;
+}
+
+.status-dot-green {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #22C55E;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── About ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 4rem;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 16px; color: var(--text-secondary);
+  line-height: 1.8; margin-bottom: 1.25rem;
+}
+
+.about-text p strong { color: var(--navy); font-weight: 500; }
+
+.about-highlights {
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+
+.highlight-card {
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  border-left: 3px solid var(--gold);
+}
+
+.highlight-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 400; color: var(--gold);
+  line-height: 1; margin-bottom: 4px;
+}
+
+.highlight-label {
+  font-size: 13px; color: var(--text-secondary); line-height: 1.5;
+}
+
+/* ── Skills ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.skill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.skill-icon {
+  font-size: 24px; margin-bottom: 0.75rem;
+}
+
+.skill-title {
+  font-size: 14px; font-weight: 500;
+  color: var(--navy); margin-bottom: 0.75rem;
+}
+
+.skill-list {
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+.skill-item {
+  font-size: 13px; color: var(--text-secondary);
+  padding: 3px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-item:last-child { border-bottom: none; }
+
+/* ── Contact ── */
+.contact-section {
+  background: var(--navy);
+  padding: 7rem 2rem;
+  text-align: center;
+}
+
+.contact-inner { max-width: 600px; margin: 0 auto; }
+
+.contact-eyebrow {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold-light); margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400; color: var(--white);
+  line-height: 1.2; margin-bottom: 1rem;
+}
+
+.contact-sub {
+  font-size: 16px; color: rgba(255,255,255,0.6);
+  line-height: 1.7; margin-bottom: 3rem;
+}
+
+.contact-links {
+  display: flex; gap: 1rem;
+  justify-content: center; flex-wrap: wrap;
+}
+
+.contact-link {
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 12px 24px; border-radius: 8px;
+  transition: all 0.2s;
+  display: flex; align-items: center; gap: 8px;
+}
+
+.contact-link.primary {
+  background: var(--gold); color: var(--navy);
+}
+
+.contact-link.primary:hover { background: var(--gold-light); }
+
+.contact-link.outline {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+}
+
+.contact-link.outline:hover {
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.footer-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px; color: rgba(255,255,255,0.4);
+}
+
+.footer-note {
+  font-size: 11px; color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .project-card { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: 2rem; }
+  nav .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-name">Usha Rajendiran</div>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Senior Product Leader · AI & Fintech</div>
+    <h1 class="hero-headline">
+      I build products<br>people <em>trust</em><br>with their money.
+    </h1>
+    <p class="hero-sub">
+      18 years building fintech products — from trading platforms to wealth management — now applying AI to create smarter, more personalized financial experiences.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-value">18</div>
+        <div class="hero-stat-label">Years in fintech</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">9+</div>
+        <div class="hero-stat-label">Years as PM</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">$169M</div>
+        <div class="hero-stat-label">Assets generated in 90 days</div>
+      </div>
+      <div>
+        <div class="hero-stat-value">0→1</div>
+        <div class="hero-stat-label">AI agent builder</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- Projects -->
+<section id="projects">
+  <div class="section-eyebrow">AI Projects</div>
+  <h2 class="section-title">Building with AI,<br>not just talking about it.</h2>
+
+  <div class="projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-content">
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
+          <span class="project-tag">Fintech · Wealth Management</span>
+          <span class="status-badge">
+            <span class="status-dot-green"></span>
+            Live
+          </span>
+        </div>
+        <h3 class="project-title">Personal Wealth Management AI Agent</h3>
+        <p class="project-desc">
+          A hybrid AI agent that combines a structured client financial profile with live market research to deliver personalized, actionable wealth management guidance. The agent autonomously decides when to search for current market data, cross-references it with the client's goals, risk tolerance, and timeline, and proactively flags misalignments in allocation strategy.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/ur2910/personal_wealth_manager" target="_blank" class="project-link">
+            ↗ View on GitHub
+          </a>
+          <a href="https://github.com/ur2910/personal_wealth_manager" target="_blank" class="project-link secondary">↗ View Code</a>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div>
+          <div class="meta-block-label">Purpose</div>
+          <p style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
+            Demonstrate AI agent architecture, RAG design, and multi-tool orchestration applied to a real fintech problem — built as a portfolio artifact for AI PM interviews.
+          </p>
+        </div>
+        <div>
+          <div class="meta-block-label">Tech Stack</div>
+          <div class="meta-tags">
+            <span class="meta-tag">n8n</span>
+            <span class="meta-tag">Claude API</span>
+            <span class="meta-tag">Tavily</span>
+            <span class="meta-tag">Google Sheets</span>
+            <span class="meta-tag">Webhook</span>
+            <span class="meta-tag">Docker</span>
+          </div>
+        </div>
+        <div>
+          <div class="meta-block-label">Key Learnings</div>
+          <div class="learning-list">
+            <div class="learning-item">RAG pattern grounds LLM responses in personal data without fine-tuning</div>
+            <div class="learning-item">Multi-tool agents autonomously decide when to search vs reason</div>
+            <div class="learning-item">Webhook orchestration cleanly separates UI from agent logic</div>
+            <div class="learning-item">Prompt engineering is a product decision, not a technical one</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 placeholder -->
+    <div class="project-card" style="opacity:0.5;border-style:dashed;">
+      <div class="project-content">
+        <span class="project-tag">Coming Soon</span>
+        <h3 class="project-title" style="color:var(--text-muted);">Next AI Project</h3>
+        <p class="project-desc">
+          Currently exploring advisor workflow automation and goal-based portfolio rebalancing as the next agent build.
+        </p>
+      </div>
+      <div class="project-meta">
+        <div>
+          <div class="meta-block-label">Status</div>
+          <p style="font-size:13px;color:var(--text-muted);">In planning</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- About -->
+<section id="about">
+  <div class="section-eyebrow">About Me</div>
+  <h2 class="section-title">Domain expert.<br>Product leader.<br>AI builder.</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I've spent <strong>18 years at the intersection of finance and technology</strong> — first as a Java engineer building trading platforms at Lehman Brothers, Morgan Stanley, and TIBCO, then as a product manager owning consumer-facing investment products at Motif Investing and Charles Schwab.
+      </p>
+      <p>
+        Today I'm a <strong>Director of Product Management at Empower</strong>, transforming wealth management advisor experiences across sales, service, and operations. I've also founded and led product at Helper Genie, a marketplace startup that went from zero to 25 paid clients in 30 days.
+      </p>
+      <p>
+        I'm now actively building AI expertise — not through certifications, but by <strong>shipping real AI agents</strong> that solve real problems in my domain. My engineering background makes AI concepts accessible; my product experience keeps me focused on outcomes over technology.
+      </p>
+      <p>
+        I'm a member of <strong>Women Defining AI</strong> and actively seeking AI product leadership roles at startups and growth-stage companies where fintech domain expertise meets genuine AI application.
+      </p>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <div class="highlight-num">$169M</div>
+        <div class="highlight-label">In assets generated in 90 days at Charles Schwab through AI-based stock trading product launch to 28M customers</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-num">6.3/7</div>
+        <div class="highlight-label">Client Easy Score achieved through prototyping and usability studies — top 4 among all Schwab products</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-num">25</div>
+        <div class="highlight-label">Paid clients acquired in 30 days at Helper Genie through MVP launch, pricing strategy, and early customer research</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-num">100+</div>
+        <div class="highlight-label">IPOs debuted on a new-to-market platform built as Senior Software Engineer at Motif Investing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- Skills -->
+<section id="skills">
+  <div class="section-eyebrow">Skills & Tools</div>
+  <h2 class="section-title">Technical depth.<br>Product breadth.</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-title">AI & Agent Building</div>
+      <div class="skill-list">
+        <div class="skill-item">n8n — workflow orchestration</div>
+        <div class="skill-item">Claude API — LLM integration</div>
+        <div class="skill-item">Tavily — live search tools</div>
+        <div class="skill-item">RAG architecture</div>
+        <div class="skill-item">Prompt engineering</div>
+        <div class="skill-item">Webhook design</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📋</div>
+      <div class="skill-title">Product Management</div>
+      <div class="skill-list">
+        <div class="skill-item">0→1 product strategy</div>
+        <div class="skill-item">Roadmaps & OKRs</div>
+        <div class="skill-item">PRD & epic writing</div>
+        <div class="skill-item">UX research & usability</div>
+        <div class="skill-item">Pricing strategy</div>
+        <div class="skill-item">Cross-functional leadership</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">💹</div>
+      <div class="skill-title">Fintech Domain</div>
+      <div class="skill-list">
+        <div class="skill-item">Retail brokerage</div>
+        <div class="skill-item">Wealth management</div>
+        <div class="skill-item">401k & retirement</div>
+        <div class="skill-item">Trading platforms</div>
+        <div class="skill-item">Payments & subscriptions</div>
+        <div class="skill-item">Advisor tools & CRM</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">⚙️</div>
+      <div class="skill-title">Technical Foundation</div>
+      <div class="skill-list">
+        <div class="skill-item">Java — 9 years</div>
+        <div class="skill-item">RESTful APIs</div>
+        <div class="skill-item">Microservices</div>
+        <div class="skill-item">SQL</div>
+        <div class="skill-item">AWS</div>
+        <div class="skill-item">Docker</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📊</div>
+      <div class="skill-title">Analytics & Testing</div>
+      <div class="skill-list">
+        <div class="skill-item">Amplitude</div>
+        <div class="skill-item">Tableau</div>
+        <div class="skill-item">Google Analytics</div>
+        <div class="skill-item">Optimizely</div>
+        <div class="skill-item">UserZoom</div>
+        <div class="skill-item">A/B testing</div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🛠️</div>
+      <div class="skill-title">Tools & Platforms</div>
+      <div class="skill-list">
+        <div class="skill-item">Figma</div>
+        <div class="skill-item">JIRA & Confluence</div>
+        <div class="skill-item">Salesforce</div>
+        <div class="skill-item">Miro</div>
+        <div class="skill-item">Replit & Lovable</div>
+        <div class="skill-item">Make.com & GumLoop</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-eyebrow">Let's Connect</div>
+    <h2 class="contact-title">Building something interesting in AI × Fintech?</h2>
+    <p class="contact-sub">
+      I'm actively exploring AI product leadership roles at startups and growth-stage companies. I bring 18 years of fintech domain expertise and genuine hands-on AI agent experience — a combination that's rare.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:ushabarghavi.r@gmail.com" class="contact-link primary">
+        ✉ Email me
+      </a>
+      <a href="https://www.linkedin.com/in/ushabarghavi/" target="_blank" class="contact-link outline">
+        ↗ LinkedIn
+      </a>
+      <a href="https://github.com/ur2910" target="_blank" class="contact-link outline">
+        ↗ GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-name">Usha Rajendiran</div>
+  <div class="footer-note">Senior Product Leader · AI & Fintech · Bay Area, CA</div>
+</footer>
+
+</body>
+</html>
