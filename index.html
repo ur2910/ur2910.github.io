@@ -165,7 +165,7 @@ section {
   border-radius: 16px;
   padding: 2.5rem;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
   transition: box-shadow 0.2s, transform 0.2s;
@@ -200,8 +200,9 @@ section {
 }
 
 .project-meta {
-  display: flex; flex-direction: column; gap: 1.25rem;
-  min-width: 240px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .meta-block-label {
